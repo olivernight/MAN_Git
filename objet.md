@@ -11,7 +11,7 @@
 |Master   |  Lorsque l'on créé un nouveau repository, deux branches par défaut sont créés. L'une d'entre elle est la branche master. Etant donné que cette branche existe dans tous les repository, par convention, c'est celle qui doit contenir le code le plus propre possible |
 |HEAD     |  A l'image de master, HEAD est lui aussi un pointeur créé lors de la création de notre repository. C'est l'endroit sur lequelle je me trouve actuellement. Toutes les modifications effectuées seront donc faite à partir de ce point.|
 
-<center>![alt text](https://git-scm.com/figures/18333fig0317-tn.png)</center>
+<center><img src="https://git-scm.com/figures/18333fig0317-tn.png" /></center>
 
 |Etat     | Définition                                                               |
 |---------|---------------------------------------------                             |
