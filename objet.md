@@ -18,5 +18,5 @@
 |---------|---------------------------------------------                             |
 |Non indexé | Nouveau fichier dans le répertoire                                     |
 |Validé     |  Les données ont été sauvegardées dans notre base de données locale (git add)     |
-|Modifié    |  Un fichier passe est au statut modifié lorsqu'il est connu de notre base de données locale mais il n'est pas pour autant identique à ce qui a été sauvegardé.                                                            |
+|Modifié    |  Un fichier passe au statut modifié lorsqu'il est connu de notre base de données locale mais il est différent de celui présent dans l'historique |
 |Indexé     |  Le fait d'indexer les modifications permet de figer notre/nos fichiers dans une état donné (git commit)             |
