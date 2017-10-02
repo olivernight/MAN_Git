@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Les objets et états · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="commandes.html" />
+    
+    
+    <link rel="prev" href="collaboratif.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="collaboratif.html">
+            
+                <a href="collaboratif.html">
+            
+                    
+                    Et le travail collaboratif dans tout ça ?!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="objet.html">
+            
+                <a href="objet.html">
+            
+                    
+                    Les objets et états
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="commandes.html">
+            
+                <a href="commandes.html">
+            
+                    
+                    J':heart: la ligne de commande
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Les objets et états</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="les-diff&#xE9;rents-objets--&#xE9;tats-sur-git">Les diff&#xE9;rents objets &amp; &#xE9;tats sur Git</h1>
+<hr>
+
+<table>
+<thead>
+<tr>
+<th>Objet</th>
+<th>D&#xE9;finition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blob</td>
+<td>Contenu d&apos;un fichier</td>
+</tr>
+<tr>
+<td>Tree</td>
+<td>Liste de blobs</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Message de log + tree + lien Commit Parent</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>Commit + Num&#xE9;ro de version</td>
+</tr>
+<tr>
+<td>Branche</td>
+<td>Pointeur sur un commit. Ceci nous permets de r&#xE9;cup&#xE9;rer un ensemble de commit. Le but des branches est de vous permettre de travailler sur des modifications sans pour autant impacter le travail des autres. Cela permet notamment de cloisonner les d&#xE9;veloppements, travailler sur des correctifs tout en maitrisant limitant les impacts.</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>Lorsque l&apos;on cr&#xE9;&#xE9; un nouveau repository, deux branches par d&#xE9;faut sont cr&#xE9;&#xE9;s. L&apos;une d&apos;entre elle est la branche master. Etant donn&#xE9; que cette branche existe dans tous les repository, par convention, c&apos;est celle qui doit contenir le code le plus propre possible</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>A l&apos;image de master, HEAD est lui aussi un pointeur cr&#xE9;&#xE9; lors de la cr&#xE9;ation de notre repository. C&apos;est l&apos;endroit sur lequelle je me trouve actuellement. Toutes les modifications effectu&#xE9;es seront donc faite &#xE0; partir de ce point.</td>
+</tr>
+</tbody>
+</table>
+<center>![alt text](https://git-scm.com/figures/18333fig0317-tn.png)</center>
+
+<table>
+<thead>
+<tr>
+<th>Etat</th>
+<th>D&#xE9;finition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non index&#xE9;</td>
+<td>Nouveau fichier dans le r&#xE9;pertoire</td>
+</tr>
+<tr>
+<td>Valid&#xE9;</td>
+<td>Les donn&#xE9;es ont &#xE9;t&#xE9; sauvegard&#xE9;es dans notre base de donn&#xE9;es locale</td>
+</tr>
+<tr>
+<td>Modifi&#xE9;</td>
+<td>Liste de blobs</td>
+</tr>
+<tr>
+<td>Index&#xE9;</td>
+<td>Message de log + tree + lien Commit Parent</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="collaboratif.html" class="navigation navigation-prev " aria-label="Previous page: Et le travail collaboratif dans tout ça ?!">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="commandes.html" class="navigation navigation-next " aria-label="Next page: J':heart: la ligne de commande">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Les objets et états","level":"1.4","depth":1,"next":{"title":"J':heart: la ligne de commande","level":"1.5","depth":1,"path":"commandes.md","ref":"commandes.md","articles":[]},"previous":{"title":"Et le travail collaboratif dans tout ça ?!","level":"1.3","depth":1,"path":"collaboratif.md","ref":"collaboratif.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["advanced-emoji","livereload"],"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"objet.md","mtime":"2017-09-28T17:16:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-28T17:05:40.920Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
