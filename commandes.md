@@ -1,4 +1,4 @@
-#J':heart: la ligne de commande
+#J'aime la ligne de commande
 <hr />
 
 <i>Pré-requis : Installation de Git sur votre environnement.</i>
