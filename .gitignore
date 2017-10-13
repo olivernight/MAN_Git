@@ -81,9 +81,12 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 # Gitbook directory
 _book/*
 
+=======
+>>>>>>> master
 © 2017 GitHub, Inc.
 Terms
 Privacy
