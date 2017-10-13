@@ -81,6 +81,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# Gitbook directory
+_book/
+
 © 2017 GitHub, Inc.
 Terms
 Privacy
